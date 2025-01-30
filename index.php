@@ -154,7 +154,7 @@
         </p>
         <button
           class="custom-button"
-          onclick="window.location.href='chatpage.html'"
+          onclick="window.location.href='chatpage.php'"
         >
           Try Demo
         </button>
