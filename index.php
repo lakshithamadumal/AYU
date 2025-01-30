@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project Ayu | Home</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      @font-face {
+        font-family: "font";
+        src: url("../AYU/resources/font.ttf") format("truetype");
+        font-weight: normal;
+        font-style: normal;
+      }
+
+      * {
+        font-family: "font", sans-serif;
+      }
+      body {
+        background: linear-gradient(135deg, #3a0d23, #000000);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        padding: 20px;
+      }
+
+      .gradient-box {
+        width: 98%;
+        max-width: 98%;
+        min-height: 50vh;
+        border-radius: 20px;
+        background: rgba(0, 0, 0, 0.6);
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.6);
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 20px;
+        position: relative;
+      }
+
+      .logo {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        width: 70px;
+        height: auto;
+      }
+
+      .center-top-logo {
+        position: absolute;
+        top: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 120px;
+        height: auto;
+      }
+
+      .center-paragraph {
+        color: white;
+        text-align: center;
+        margin-top: 80px;
+      }
+
+      .custom-button {
+        margin-top: 10px;
+        padding: 10px 20px;
+        background-image: linear-gradient(to right, #e11f59, #1c0a11);
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        display: block;
+        margin: 10px auto;
+      }
+
+      .custom-button:hover {
+        background-image: linear-gradient(to right, #99173e, #060204);
+        transition: 0.9s;
+      }
+
+      .topic {
+        color: white;
+        font-size: 21px;
+        margin-top: -20px;
+      }
+
+      .paragraph-ayu {
+        color: white;
+      }
+
+      .robot-image {
+        max-width: 100%;
+        height: auto;
+        animation: float 3s ease-in-out infinite alternate;
+      }
+
+      @keyframes float {
+        0% {
+          transform: translateY(10px);
+        }
+        100% {
+          transform: translateY(-10px);
+        }
+      }
+
+      .content-row {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+      }
+
+      .content-row .col-md-12 {
+        text-align: center;
+      }
+      .paragraph-lg {
+        color: white;
+        text-align: left;
+      }
+      .footer {
+        text-align: center;
+        color: white;
+        margin-top: 20px;
+        font-size: 14px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="gradient-box">
+      <img
+        src="../AYU/resources/AI_AURO_WHITE.png"
+        alt="Logo"
+        class="logo"
+      />
+      <img
+        src="../AYU//resources/ayu-logo.png"
+        alt="Center Top Logo"
+        class="center-top-logo mb-5"
+      />
+      <div class="mt-4 pt-3">
+        <p class="center-paragraph">
+          Team Aura introduces the Health Assistant Robot, designed to support
+          personal health management. Tailored for Sri Lanka with Sinhala
+          language support, it provides health advice, monitors ailments, and
+          promotes a healthier lifestyle, ensuring accessibility for all.
+        </p>
+        <button
+          class="custom-button"
+          onclick="window.location.href='chatpage.html'"
+        >
+          Try Demo
+        </button>
+      </div>
+      <div class="col-12">
+        <h3 class="topic mb-3">Robot Ayu - Your Home Health Assistant</h3>
+      </div>
+      <div class="row content-row">
+        <div class="col-lg-6 col-md-12">
+          <p class="paragraph-lg">
+            Team Aura is proud to present the Health Assistant Robot, an
+            advanced and innovative tool designed to transform the way people
+            manage their health. This intelligent robot combines cutting-edge
+            technology with user-friendly features to provide personalized
+            health advice, monitor common ailments, and assist in daily health
+            routines. Tailored specifically for Sri Lanka, the robot integrates
+            Sinhala language support, ensuring that it is accessible and
+            practical for local communities. It can analyze symptoms, offer
+            preventive care tips, and guide users on managing chronic
+            conditions. By bridging the gap between technology and healthcare,
+            the Health Assistant Robot empowers individuals to take charge of
+            their well-being. With its focus on accessibility, innovation, and
+            usability, this robot represents a significant step forward in using
+            technology to improve everyday life. Team Aura envisions a future
+            where health management is seamless, personalized, and within reach
+            of everyone.
+          </p>
+        </div>
+        <div class="col-lg-6 col-md-12">
+          <img
+            src="../AYU//resources/robot.png"
+            alt="Health Assistant Robot"
+            class="robot-image"
+          />
+        </div>
+        <div class="footer paragraph-lg">&copy; 2025 AURA</div>
+      </div>
+    </div>
+  </body>
+</html>
