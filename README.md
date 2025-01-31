@@ -11,8 +11,15 @@
 
 ## 🛠️ Technologies Used
 ### **Phase 1: Web-Based AI**
-- **PHP, JavaScript, CSS** for frontend & backend development
-- **MySQL** for database management
+- **PHP, CSS, JavaScript** for frontend & backend development 🖥️
+- **Python** for AI model integration and backend processing 🐍
+- **JSON** for data interchange between frontend and backend 📄🔄
+- Vector **Embedding** for improved NLP capabilities and semantic search 📊🧠
+- **SingleStore** for database management (instead of MySQL) 🗄️
+- **VS Code** for development environment 🧑‍💻
+- **Postman** for API testing 📡
+- **XAMPP** for local server setup ⚙️
+- **GitHub** for version control and collaboration 🔧🌐
 
 ### **Phase 2: Arduino-Powered Bot**
 - **Arduino** for hardware integration
