@@ -202,8 +202,7 @@
           // Backend request
           fetch(
             "http://localhost/AYU/chatGPT.php?query=" +
-              encodeURIComponent(messageText) +
-              "&&role=You are a doctor assistant"
+              encodeURIComponent(messageText)
           )
             .then((res) =>
               res.ok ? res.json() : Promise.reject("Error fetching response")
@@ -217,12 +216,18 @@
               );
               botMessage.innerHTML = `
                     <img src="../AYU/resources/ayu-logo.png" alt="Ayu Logo" class="receiver-logo">
-                    ${data.choices[0].message.content}
+                    ${data.response}
                 `;
               chatContainer.appendChild(botMessage);
               chatContainer.scrollTop = chatContainer.scrollHeight;
             })
-            .catch((error) => console.error("Error:", error));
+            .catch((error) => {
+              let errorMessage = document.createElement("div");
+              errorMessage.classList.add("message", "receiver");
+              errorMessage.innerText =
+                "An error occurred while connecting to the server.";
+              chatContainer.appendChild(errorMessage);
+            });
         }
       }
       function handleKeyPress(event) {
