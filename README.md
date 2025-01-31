@@ -21,7 +21,7 @@
 - **XAMPP** for local server setup ⚙️
 - **GitHub** for version control and collaboration 🔧🌐
 
-### **Phase 2: Arduino-Powered Bot**
+### **Phase 2: Hardware Integration**
 - **Arduino** for hardware integration
 - **C/C++** for microcontroller programming
 - **Natural Language Processing (NLP)** for smooth conversations
@@ -31,6 +31,9 @@
 2. **Future Integration with the Bot** – The AI will be embedded into the physical bot.
 3. **Ask health-related questions** – Speak in Sinhala, and AYU will respond.
 4. **Get instant guidance** – AYU provides relevant health tips.
+
+## 🎥 Live Demo
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-Click%20Here-green)](https://ayu-puce.vercel.app/)
 
 ## 💡 Future Improvements
 - 📈 **Smart health monitoring** with additional sensors
