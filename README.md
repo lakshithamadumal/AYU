@@ -27,7 +27,7 @@
 - **Natural Language Processing (NLP)** for smooth conversations
 
 ## 🎥 Live Demo
-[![Live Demo](https://img.shields.io/badge/Live%20Demo-Click%20Here-green)](https://ayu-puce.vercel.app/){:target="_blank"}
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-Click%20Here-green)](https://ayu-puce.vercel.app/)
 
 ## 💡 Future Improvements
 - 📈 **Smart health monitoring** with additional sensors
