@@ -1,52 +1,36 @@
 <?php
-if (isset($_GET['prompt']) && $_GET['prompt'] != '' && isset($_GET['role']) && $_GET['role'] != '') {
-    // Your OpenAI API key
-    $apiKey = "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";
+header('Content-Type: application/json; charset=utf-8');
 
-    // API endpoint
-    $url = "https://api.openai.com/v1/chat/completions";
+// vector_search.php එක load කරන්න
+require_once 'vector_search.php';
 
-    // Request payload
-    $data = [
-        "model" => "gpt-4o-mini",
-        "messages" => [
-            [
-                "role" => "system",
-                "content" => $_GET['role']
-            ],
-            [
-                "role" => "user",
-                "content" => $_GET['prompt']
-            ]
-        ]
-    ];
+// Vector search class එක initialize කරන්න
+$vectorSearch = new VectorSearch('data/health_vectors.json');
 
-    // Initialize cURL session
-    $ch = curl_init($url);
+// $qaDatabase එක (තව ප්‍රශ්න සහ උත්තර ඇතුළත් කරන්න පුළුවන්)
+$qaDatabase = [
+    "මානසික ආතතියට ප්‍රතිකාර" => "මානසික ආතතිය සඳහා සෙරපි, යෝගා, සහ හොඳ නිදියුම් ප්‍රතිකාර වේ.",
+    //"ආහාර පාලනයේ වාසි" => "ආහාර පාලනය හොඳ සෞඛ්‍යයක් සඳහා මහඟු වේ.",
+    //"ජලය පානය කිරීමේ වාසි" => "ජලය පානය කිරීම ශරීරයේ තෙතමනය පවත්වා ගැනීමට සහය වේ."
+];
 
-    // Set cURL options
-    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-    curl_setopt($ch, CURLOPT_POST, true);
-    curl_setopt($ch, CURLOPT_HTTPHEADER, [
-        "Content-Type: application/json",
-        "Authorization: Bearer $apiKey"
-    ]);
-    curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($data));
+// පරිශීලකයාගේ query එක ගන්න
+$userQuery = isset($_GET["query"]) ? $_GET["query"] : "";
 
-    // Execute the cURL request
-    $response = curl_exec($ch);
+// පළමුව `$qaDatabase` තුළින් ගැලපෙන පිළිතුරක් සොයන්න
+$bestMatch = $vectorSearch->findBestMatch($userQuery, $qaDatabase);
 
-    // Check for errors
-    if (curl_errno($ch)) {
-        echo json_encode(["error" => curl_error($ch)], JSON_PRETTY_PRINT);
-    } else {
-        // Decode and display the response in JSON format
-        header('Content-Type: application/json');
-        echo $response;
-    }
-
-    // Close the cURL session
-    curl_close($ch);
+if ($bestMatch) {
+    echo json_encode(["response" => $bestMatch, "source" => "health_vector_match"], JSON_UNESCAPED_UNICODE);
 } else {
-    return ['message' => false];
+    // $qaDatabase තුළ නැති ප්‍රශ්නයක් ඇහුවොත්, vector data එකෙන් උත්තරයක් ලබාදෙන්න
+    $vectorMatch = $vectorSearch->findVectorMatch($userQuery);
+
+    if ($vectorMatch) {
+        echo json_encode(["response" => $vectorMatch, "source" => "health_vector_fallback"], JSON_UNESCAPED_UNICODE);
+    } else {
+        // තවමත් ගැලපෙන එකක් නැත්නම් fallback response එකක්
+        echo json_encode(["response" => "මට මේ පිළිබඳව තවදුරටත් තොරතුරු නැහැ.", "source" => "fallback"], JSON_UNESCAPED_UNICODE);
+    }
 }
+?>
