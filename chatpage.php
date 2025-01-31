@@ -201,7 +201,7 @@
 
           // Backend request
           fetch(
-            "http://localhost/AYU/chatGPT.php?prompt=" +
+            "http://localhost/AYU/chatGPT.php?query=" +
               encodeURIComponent(messageText) +
               "&&role=You are a doctor assistant"
           )
