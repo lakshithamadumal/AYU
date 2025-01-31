@@ -1,7 +1,7 @@
 <?php
 if (isset($_GET['prompt']) && $_GET['prompt'] != '' && isset($_GET['role']) && $_GET['role'] != '') {
     // Your OpenAI API key
-    $apiKey = "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";
+    $apiKey = "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";
 
     // API endpoint
     $url = "https://api.openai.com/v1/chat/completions";
