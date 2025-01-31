@@ -12,10 +12,10 @@
 ## 🛠️ Technologies Used
 ### **Phase 1: Web-Based AI**
 - **PHP, CSS, JavaScript** for frontend & backend development 🖥️
-- **Python** for AI model integration and backend processing 🐍
-- **JSON** for data interchange between frontend and backend 📄🔄
+- **Python** for AI model integration and backend processing 🐥
+- **JSON** for data interchange between frontend and backend 📝🔄
 - Vector **Embedding** for improved **NLP** capabilities and semantic search 📊🧠
-- **SingleStore** for database management (instead of MySQL) 🗄️
+- **SingleStore** for database management (instead of MySQL) 💾
 - **VS Code** for development environment 🧑‍💻
 - **Postman** for API testing 📡
 - **XAMPP** for local server setup ⚙️
@@ -26,24 +26,18 @@
 - **C/C++** for microcontroller programming
 - **Natural Language Processing (NLP)** for smooth conversations
 
-## 📌 How to Use
-1. **Access the Web AI** – Interact with the system online.
-2. **Future Integration with the Bot** – The AI will be embedded into the physical bot.
-3. **Ask health-related questions** – Speak in Sinhala, and AYU will respond.
-4. **Get instant guidance** – AYU provides relevant health tips.
-
 ## 🎥 Live Demo
-[![Live Demo](https://img.shields.io/badge/Live%20Demo-Click%20Here-green)](https://ayu-puce.vercel.app/)
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-Click%20Here-green)](https://ayu-puce.vercel.app/){:target="_blank"}
 
 ## 💡 Future Improvements
 - 📈 **Smart health monitoring** with additional sensors
-- 🔗 **Mobile app integration** for seamless interaction
+- 📚 **Mobile app integration** for seamless interaction
 - 🌍 **Multilingual support** for wider accessibility
 
 ## 🤝 Contributing
 We welcome contributions! Feel free to **fork** the repository, create a **pull request**, or submit **issues** for improvements.
 
-## 📜 License
+## 🐜 License
 This project is licensed under the **MIT License**.
 
 ---
