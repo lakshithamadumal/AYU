@@ -51,7 +51,7 @@ if ($bestMatch) {
         $generatedResponse = $responseData['candidates'][0]['content']['parts'][0]['text'] ?? "සමාවෙන්න, මට පිළිතුරක් ලබාදිය නොහැක.";
         echo json_encode(["response" => $generatedResponse, "source" => "gemini_api"], JSON_UNESCAPED_UNICODE);
     } else {
-        echo json_encode(["response" => "Gemini API එකේ දෝෂයක් සිදුවිය.", "source" => "error"], JSON_UNESCAPED_UNICODE);
+        echo json_encode(["response" => "AYU AI එකේ දෝෂයක් සිදුවිය.", "source" => "error"], JSON_UNESCAPED_UNICODE);
     }
 }
 ?>
