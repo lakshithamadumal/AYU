@@ -20,6 +20,7 @@
 - **Postman** for API testing 📡
 - **XAMPP** for local server setup ⚙️
 - **GitHub** for version control and collaboration 🔧🌐
+- **ChatGPT API, Gemini API, and Eleven Labs API** for AI-powered responses 🤖🌐📢
 
 ### **Phase 2: Hardware Integration**
 - **Arduino** for hardware integration
